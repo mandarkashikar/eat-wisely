@@ -1,0 +1,21 @@
+{
+  "name": "Mandar",
+  "note": "First real test profile — fill in/edit as needed during testing",
+  "allergensAndAvoids": [
+    "fish oil",
+    "fried foods (cholesterol-conscious, not an allergy — avoid, don't hard-block)"
+  ],
+  "loves": [
+    "Indian food",
+    "spicy food",
+    "dark chocolate gelato (gianduja, black sesame flavors especially)"
+  ],
+  "dietaryConstraints": {
+    "cholesterolConscious": true,
+    "hardAllergens": ["fish oil"]
+  },
+  "crossCuisinePreferenceHints": [
+    "If no Indian food on the menu, look for other spicy/bold-flavor dishes as the closest match",
+    "Prefer grilled/roasted over fried when scoring equivalent dishes"
+  ]
+}
