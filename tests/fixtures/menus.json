@@ -1,0 +1,62 @@
+[
+  {
+    "id": "thai_street_bistro",
+    "cuisine": "Thai",
+    "name": "Bangkok Street Bistro",
+    "menuText": "1. Pad Thai - Rice noodles stir-fried with tofu, bean sprouts, crushed peanuts, egg, and tamarind fish sauce.\n2. Crispy Spring Rolls - Deep-fried rolls stuffed with cabbage, carrots, and glass noodles, served with sweet chili dip.\n3. Grilled Chicken Satay - Skewered marinated chicken breast grilled over flame, served with spicy peanut sauce and cucumber relish.\n4. Tom Yum Goong - Hot and sour lemongrass broth with shrimp, mushrooms, chili, lime leaves, and a dash of fish oil.\n5. Green Curry Chicken - Fiery spicy coconut milk curry with bamboo shoots, Thai basil, and chicken breast.",
+    "expectedResults": {
+      "hardAllergenItems": [
+        "Pad Thai",
+        "Tom Yum Goong"
+      ],
+      "avoidItems": [
+        "Crispy Spring Rolls"
+      ],
+      "topRecommendedItems": [
+        "Green Curry Chicken",
+        "Grilled Chicken Satay"
+      ],
+      "rationale": "Pad Thai and Tom Yum contain fish sauce/oil (hard allergens). Spring rolls are deep-fried (avoid). Green Curry and Grilled Satay match spicy love and grilled preference."
+    }
+  },
+  {
+    "id": "trattoria_roma",
+    "cuisine": "Italian",
+    "name": "Trattoria Roma",
+    "menuText": "1. Calamari Fritti - Tender squid rings, lightly battered and flash-fried crispy, served with garlic aioli.\n2. Penne all'Arrabbiata - Penne pasta tossed in a fiery, spicy crushed red pepper and garlic San Marzano tomato sauce.\n3. Pollo alla Griglia - Herb-marinated chicken breast grilled to perfection, served with roasted vegetables.\n4. Fritto Misto - Assorted fried seafood and seasonal vegetables.\n5. Artisanal Gelato Trio - Handcrafted scoop featuring dark chocolate gianduja, pistachio, and vanilla bean.",
+    "expectedResults": {
+      "hardAllergenItems": [],
+      "avoidItems": [
+        "Calamari Fritti",
+        "Fritto Misto"
+      ],
+      "topRecommendedItems": [
+        "Penne all'Arrabbiata",
+        "Artisanal Gelato Trio",
+        "Pollo alla Griglia"
+      ],
+      "rationale": "Penne all'Arrabbiata provides bold spicy flavor (cross-cuisine analog for Indian food lover). Gelato includes dark chocolate gianduja (explicit love). Fried items avoided."
+    }
+  },
+  {
+    "id": "cantina_mexicana",
+    "cuisine": "Mexican",
+    "name": "Taqueria & Cantina",
+    "menuText": "1. Taquitos Dorados - Crispy deep-fried rolled corn tortillas filled with shredded chicken.\n2. Carne Asada Platter - Flame-grilled flank steak marinated in citrus and spices, served with charred jalapeño salsa and warm corn tortillas.\n3. Chimichanga Especial - Deep-fried flour tortilla stuffed with beef, melted cheese, and refried beans.\n4. Pollo Al Pastor Bowl - Grilled achiote-spiced chicken, spicy habanero salsa, black beans, and cilantro rice.\n5. Caesar Salad con Anchoas - Classic crisp romaine tossed with traditional Caesar dressing made with anchovy paste and fish oil.",
+    "expectedResults": {
+      "hardAllergenItems": [
+        "Caesar Salad con Anchoas"
+      ],
+      "avoidItems": [
+        "Taquitos Dorados",
+        "Chimichanga Especial"
+      ],
+      "topRecommendedItems": [
+        "Pollo Al Pastor Bowl",
+        "Carne Asada Platter"
+      ],
+      "rationale": "Caesar contains fish oil (hard allergen). Taquitos and chimichangas are deep-fried. Grilled steak and spicy pastor bowl match bold/spicy cross-cuisine preferences."
+    }
+  }
+]
+

@@ -16,25 +16,51 @@ Picky eaters with allergies forget to check menu items at restaurants or on deli
 4. Cross-cuisine matching: "you love X about Indian food → here's the analog on this menu" is the differentiator over a plain allergen filter
 
 ## Course Arc Mapping
-- Week 1: first agent — menu parsing + scoring logic
+- Week 1: first agent — menu parsing + scoring logic (powered locally with Ollama & `llama3.2`)
 - Week 2: RAG — once it needs structured knowledge about cuisines/ingredients beyond what's in the prompt
 - Week 3: evals — build a test set of (menu, profile) → expected flagged items / top picks
 - Week 4: safety — allergen flags must never produce false negatives; this is the one place "mostly right" isn't good enough
 - Week 5: production deploy
 
 ## Stack
-Next.js 16 + React 19 + TypeScript + Tailwind (matches mandark.dev / smb-app-picker conventions).
+- Next.js 16 + React 19 + TypeScript + Tailwind CSS
+- **Model Backend:** Local **Ollama** running `llama3.2`
+- **Testing & Evals:** Vitest + custom safety eval harness
 
 ## Status
 - [x] Repo scaffolded
 - [x] Seed preference profile (Mandar's real profile, as first test case)
-- [ ] Menu paste + parse flow
-- [ ] Scoring/ranking agent (Claude API)
-- [ ] Allergen-flag safety pass (zero false negatives is the bar)
+- [x] Test environment & automated eval harness with zero-false-negative assertions
+- [x] Local LLM integration with Ollama (`llama3.2`)
+- [x] Menu paste + parse flow with interactive UI
+- [ ] RAG expansion for cuisine knowledge (Week 2)
 - [ ] Photo/OCR input (fast-follow, not v1)
 
 ## Getting Started
+
+### 1. Ensure Ollama is running with `llama3.2`
 ```bash
-npm run dev
+ollama run llama3.2
 ```
-Copy `.env.example` to `.env.local` and add your Anthropic API key before wiring up the agent.
+
+### 2. Configure Environment
+Copy `.env.example` to `.env.local`:
+```bash
+cp .env.example .env.local
+```
+Defaults to:
+```env
+OLLAMA_BASE_URL=http://127.0.0.1:11434
+OLLAMA_MODEL=llama3.2
+```
+
+### 3. Run Locally
+```bash
+npm run dev -- --webpack
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### 4. Run Automated Evals & Tests
+```bash
+npm test
+```
