@@ -1,19 +1,38 @@
-# Eat Wisely
+# 🍽️ Eat Wisely
 
-A menu scanner that tells you what to avoid and what you'll love, based on your allergies and taste profile.
+An agentic menu scanner that tells you what to avoid and what you'll love, based on your allergies and taste profile.
 
-Built as a project for the [Agentic AI PM Certification](https://maven.com/mahesh-yadav/genaipm) (Cohort 11).
+Built as a capstone project for the [Agentic AI PM Certification](https://maven.com/mahesh-yadav/genaipm) (Cohort 11).
 
-## Problem
+![Eat Wisely Demo](docs/demo.gif)
 
-Picky eaters with allergies forget to check menu items at restaurants or on delivery apps. Decision fatigue + risk of eating something you'll regret (allergen, or just something you won't enjoy).
+---
 
-## MVP Scope (v1 — built for speed, not photo OCR yet)
+## The Problem
 
-1. User pastes menu text (skip camera/OCR for v1 — that's a fast-follow, not the hard part)
-2. User has a preference profile: allergens/avoids, loves, dietary constraints (see `data/profiles/example-profile.json`, seeded with Mandar's own real profile as the first test case)
-3. Agent parses the menu, flags allergen risks, scores/ranks items against the profile
-4. Cross-cuisine matching: "you love X about Indian food → here's the analog on this menu" is the differentiator over a plain allergen filter
+Picky eaters with dietary restrictions and allergies face decision fatigue every time they eat out. Reading long menus or checking items on delivery apps is exhausting, and missing a hidden ingredient (like fish sauce in Thai dishes or peanuts in satay) can ruin a meal or cause an allergic reaction.
+
+---
+
+## Features
+
+- **Local AI Brain (Zero External API Fees):** Powered by **Ollama** running `llama3.2` locally for privacy and cost-efficiency.
+- **Multiple Menu Ingestion Options:**
+  - 📄 Upload menu text files (`.txt`, `.md`, `.csv`)
+  - 📍 Paste **Google Maps place links** or restaurant website URLs (auto-extracts dishes and context)
+  - ✍️ Paste raw menu text or click 1-click sample presets
+- **Deterministic 0-Tolerance Safety Guardrail:**
+  - Zero-false-negative hard allergen enforcement with `lib/safety.ts`.
+  - Dishes with hard allergens (e.g. chicken, peanuts, fish oil, shellfish, dairy, gluten) are programmatically disqualified and never recommended.
+- **Curated Multi-Option Selector:**
+  - **Option 1 (✨ Ready As-Is):** 100% compliant off the menu without special requests.
+  - **Options 2 & 3 (🔄 With Kitchen Substitution):** Flavor matches with actionable kitchen scripts (e.g., *"Ask your server: 'Could the kitchen prepare this with olive oil instead of canola oil?'"*).
+  - **🗣️ Tell Your Server:** 1-click clipboard copy button to copy the ordering script or show your phone to your waiter.
+- **Interactive Preferences & Allergies Drawer:**
+  - Real-time side panel to adjust hard allergens, dietary avoids, and flavor loves.
+  - Automatically re-evaluates the active menu on save.
+- **Rigorous Eval & Test Suite:**
+  - Automated test harness with Vitest asserting zero false negatives across multi-cuisine menu fixtures.
 
 ## Course Arc Mapping
 - Week 1: first agent — menu parsing + scoring logic (powered locally with Ollama & `llama3.2`)
