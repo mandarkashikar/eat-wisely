@@ -1,21 +1,21 @@
 {
-  "name": "Mandar",
-  "note": "First real test profile — fill in/edit as needed during testing",
+  "name": "Example User",
+  "note": "Generic example profile — copy/edit this for your own testing",
   "allergensAndAvoids": [
-    "fish oil",
-    "fried foods (cholesterol-conscious, not an allergy — avoid, don't hard-block)"
+    "shellfish",
+    "peanuts"
   ],
   "loves": [
-    "Indian food",
+    "Thai food",
     "spicy food",
-    "dark chocolate gelato (gianduja, black sesame flavors especially)"
+    "grilled vegetables"
   ],
   "dietaryConstraints": {
-    "cholesterolConscious": true,
-    "hardAllergens": ["fish oil"]
+    "vegetarian": false,
+    "hardAllergens": ["shellfish", "peanuts"]
   },
   "crossCuisinePreferenceHints": [
-    "If no Indian food on the menu, look for other spicy/bold-flavor dishes as the closest match",
+    "If no Thai food on the menu, look for other spicy/bold-flavor dishes as the closest match",
     "Prefer grilled/roasted over fried when scoring equivalent dishes"
   ]
 }
